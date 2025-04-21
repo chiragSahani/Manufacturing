@@ -93,7 +93,7 @@ Detect unusual behavior in production such as:
 |--------|-------|-------|--------|
 | **Downtime Prediction** | Random Forest / LSTM | Past downtimes, usage patterns | Downtime probability |
 | **Anomaly Detection** | Isolation Forest, Autoencoder | Production metrics | Anomaly alert |
-| **Conversational Assistant** | GPT-4 (via API) | Natural language query | Insightful response |
+| **Conversational Assistant** | PerplexityAI (via API) | Natural language query | Insightful response |
 
 ---
 
