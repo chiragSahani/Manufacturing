@@ -1,101 +1,118 @@
+
 # 🏭 AI-Enhanced Hourly Sheet Tracking System
 
-[Live Deployment ➜](https://neuralnomads.vercel.app/)
+**Live Demo:** [neuralnomads.vercel.app](https://neuralnomads.vercel.app/)
 
-An intelligent manufacturing dashboard that automates and enhances production tracking using Conversational AI, Downtime Prediction, and Anomaly Detection. This system redefines real-time monitoring and decision-making on the shop floor using AI-powered insights.
-
----
-
-## 🚀 Features
-
-### 🔹 Conversational AI Assistant
-Interact with a smart assistant to get instant answers on:
-- Production performance by machine/operator
-- Shift-wise output and defect count
-- Downtime predictions and efficiency stats
-
-**Example Queries:**
-- _“Show today’s total defects by machine X.”_
-- _“How many units did Operator Y produce last shift?”_
-- _“Predict downtime risk for Machine Z.”_
-
-### 🔹 Downtime Prediction
-Predict potential machine breakdowns based on:
-- Historical downtime logs
-- Machine usage patterns
-- Operator activity and shift data
-
-**Sample Output:**  
-> _“Machine A has a 78% risk of downtime in the next 2 hours.”_
-
-### 🔹 Anomaly Detection
-Detect unusual behavior in production such as:
-- Sudden drop in output
-- Unexpected spike in defect rate
-- Underperforming machines/operators
-
-**AI Techniques Used:**
-- Isolation Forests
-- Autoencoders
-
-**Sample Output:**  
-> _“Machine B’s output dropped by 30% in the last hour. Possible issue detected!”_
+This is a full-stack AI-powered system to enhance real-time monitoring on the factory floor through smart production tracking, anomaly detection, and predictive maintenance.
 
 ---
 
-## 📊 Hourly Sheet - Data Structure
+## 📦 Project Overview
 
-| Field Name                  | Description |
-|----------------------------|-------------|
-| **Date & Shift Details**   | Date and shift (Morning/Afternoon/Night) |
-| **Machine/Workstation ID** | Unique machine/workstation ID |
-| **Operator Name**          | Name of the assigned operator |
-| **Product Name / Part #**  | Product or part being manufactured |
-| **Target Output**          | Planned units per hour |
-| **Actual Output**          | Actual units produced per hour |
-| **Cumulative Output**      | Total output from shift start to current hour |
-| **Defects/Rework Units**   | Defective or reworked units in that hour |
-| **Downtime (Minutes)**     | Machine idle time during the hour |
-| **Reason for Downtime**    | Downtime cause (if any) |
-| **Operator Remarks**       | Optional notes/comments |
+**Hourly Sheet** logs are digitized and enhanced with AI for:
+- Conversational insights via a chatbot
+- Predictive analytics for downtime
+- Anomaly detection in operator/machine performance
 
 ---
 
-## 👥 Team & Timeline
+## 💡 Key Features
 
-- **Team Size:** X  
-- **Time Limit:** 120 Minutes  
+### 🧠 Conversational AI Assistant
+- Ask questions like:
+  - “How many units did Operator Y produce last shift?”
+  - “Show today’s total defects by machine X.”
+  - “Predict downtime risk for Machine Z.”
+
+### 🔧 Downtime Prediction
+- Predict machine breakdowns using historical logs and usage patterns.
+
+### 🚨 Anomaly Detection
+- Detect unusual patterns in production, such as sudden efficiency drops.
+
+---
+
+## 🧾 Hourly Sheet Data Fields
+
+| Field Name               | Description |
+|--------------------------|-------------|
+| Date & Shift Details     | Date and shift time |
+| Machine/Workstation ID   | Unique machine ID |
+| Operator Name            | Responsible operator |
+| Product Name / Part #    | Product being manufactured |
+| Target Output            | Planned production per hour |
+| Actual Output            | Actual production per hour |
+| Cumulative Output        | Total output from shift start |
+| Defects/Rework Units     | Defective or rework items |
+| Downtime (Minutes)       | Machine idle time |
+| Reason for Downtime      | Reason for any recorded downtime |
+| Operator Remarks         | Optional comments |
 
 ---
 
 ## ⚙️ Tech Stack
 
-- **Frontend:** React, Vite, TailwindCSS
-- **Backend:** Node.js, Express
-- **AI Models:** Scikit-learn, TensorFlow (Autoencoders), OpenAI (for Chat Assistant)
-- **Database:** MongoDB (Production Logs)
-- **Deployment:** [Vercel](https://neuralnomads.vercel.app/)
-- **AI Libraries:** `transformers`, `sklearn`, `tensorflow`, `pandas`, `nltk`
+- **Frontend**: Next.js, TailwindCSS
+- **Backend**: Node.js, Vercel Edge Functions
+- **AI Modules**: Python (for ML models)
+- **Models Used**:
+  - Random Forest (Downtime Prediction)
+  - Autoencoders / Isolation Forest (Anomaly Detection)
+  - GPT-based (Conversational Assistant)
 
 ---
 
-## 🔍 Use Cases
+## 📁 Project Structure
 
-- 📉 Predict machine failures and reduce downtime.
-- 🧠 Smart queries on production data using conversational AI.
-- 🚨 Early warning for performance anomalies to take proactive measures.
-
----
-
-## 🧠 AI Models in Action
-
-| Feature | Model | Input | Output |
-|--------|-------|-------|--------|
-| **Downtime Prediction** | Random Forest / LSTM | Past downtimes, usage patterns | Downtime probability |
-| **Anomaly Detection** | Isolation Forest, Autoencoder | Production metrics | Anomaly alert |
-| **Conversational Assistant** | PerplexityAI (via API) | Natural language query | Insightful response |
+```
+/app                 # Next.js pages and routing
+/components          # UI components
+/styles              # Global styles (TailwindCSS)
+/public              # Static assets
+/utils               # Helper functions
+/models              # AI/ML model integration logic
+```
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Installation
 
+```bash
+git clone https://github.com/yourusername/Manufacturing-main.git
+cd Manufacturing-main
+pnpm install
+pnpm dev
+```
+
+_Ensure you have `pnpm` installed. You can also use `npm` or `yarn`._
+
+---
+
+## 🧠 AI Capabilities
+
+| Feature              | Model            | Output                                 |
+|----------------------|------------------|----------------------------------------|
+| Conversational AI    | GPT API          | Natural language answers               |
+| Downtime Prediction  | Random Forest    | Probability of machine failure         |
+| Anomaly Detection    | Autoencoder/IF   | Alerts on performance deviations       |
+
+---
+
+## 📈 Deployment
+
+This project is deployed on **Vercel**:  
+🔗 [https://neuralnomads.vercel.app](https://neuralnomads.vercel.app)
+
+---
+
+## 📌 Future Enhancements
+
+- 📡 Live sensor data integration (via MQTT)
+- 📲 Mobile dashboard with push alerts
+- 📊 Visual analytics for production trends
+
+---
+
+
+> Built to modernize manufacturing monitoring with the power of AI and real-time insights.  
+> — Team NeuralNomads
