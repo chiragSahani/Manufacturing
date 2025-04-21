@@ -1,30 +1,101 @@
-# Manufacturing Insights Project
+# 🏭 AI-Enhanced Hourly Sheet Tracking System
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+[Live Deployment ➜](https://neuralnomads.vercel.app/)
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/chiragsahanis-projects/v0-manufacturing-insights-project)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/55macQm0OCI)
+An intelligent manufacturing dashboard that automates and enhances production tracking using Conversational AI, Downtime Prediction, and Anomaly Detection. This system redefines real-time monitoring and decision-making on the shop floor using AI-powered insights.
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🚀 Features
 
-## Deployment
+### 🔹 Conversational AI Assistant
+Interact with a smart assistant to get instant answers on:
+- Production performance by machine/operator
+- Shift-wise output and defect count
+- Downtime predictions and efficiency stats
 
-Your project is live at:
+**Example Queries:**
+- _“Show today’s total defects by machine X.”_
+- _“How many units did Operator Y produce last shift?”_
+- _“Predict downtime risk for Machine Z.”_
 
-**[https://vercel.com/chiragsahanis-projects/v0-manufacturing-insights-project](https://vercel.com/chiragsahanis-projects/v0-manufacturing-insights-project)**
+### 🔹 Downtime Prediction
+Predict potential machine breakdowns based on:
+- Historical downtime logs
+- Machine usage patterns
+- Operator activity and shift data
 
-## Build your app
+**Sample Output:**  
+> _“Machine A has a 78% risk of downtime in the next 2 hours.”_
 
-Continue building your app on:
+### 🔹 Anomaly Detection
+Detect unusual behavior in production such as:
+- Sudden drop in output
+- Unexpected spike in defect rate
+- Underperforming machines/operators
 
-**[https://v0.dev/chat/projects/55macQm0OCI](https://v0.dev/chat/projects/55macQm0OCI)**
+**AI Techniques Used:**
+- Isolation Forests
+- Autoencoders
 
-## How It Works
+**Sample Output:**  
+> _“Machine B’s output dropped by 30% in the last hour. Possible issue detected!”_
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+---
+
+## 📊 Hourly Sheet - Data Structure
+
+| Field Name                  | Description |
+|----------------------------|-------------|
+| **Date & Shift Details**   | Date and shift (Morning/Afternoon/Night) |
+| **Machine/Workstation ID** | Unique machine/workstation ID |
+| **Operator Name**          | Name of the assigned operator |
+| **Product Name / Part #**  | Product or part being manufactured |
+| **Target Output**          | Planned units per hour |
+| **Actual Output**          | Actual units produced per hour |
+| **Cumulative Output**      | Total output from shift start to current hour |
+| **Defects/Rework Units**   | Defective or reworked units in that hour |
+| **Downtime (Minutes)**     | Machine idle time during the hour |
+| **Reason for Downtime**    | Downtime cause (if any) |
+| **Operator Remarks**       | Optional notes/comments |
+
+---
+
+## 👥 Team & Timeline
+
+- **Team Size:** X  
+- **Time Limit:** 120 Minutes  
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend:** React, Vite, TailwindCSS
+- **Backend:** Node.js, Express
+- **AI Models:** Scikit-learn, TensorFlow (Autoencoders), OpenAI (for Chat Assistant)
+- **Database:** MongoDB (Production Logs)
+- **Deployment:** [Vercel](https://neuralnomads.vercel.app/)
+- **AI Libraries:** `transformers`, `sklearn`, `tensorflow`, `pandas`, `nltk`
+
+---
+
+## 🔍 Use Cases
+
+- 📉 Predict machine failures and reduce downtime.
+- 🧠 Smart queries on production data using conversational AI.
+- 🚨 Early warning for performance anomalies to take proactive measures.
+
+---
+
+## 🧠 AI Models in Action
+
+| Feature | Model | Input | Output |
+|--------|-------|-------|--------|
+| **Downtime Prediction** | Random Forest / LSTM | Past downtimes, usage patterns | Downtime probability |
+| **Anomaly Detection** | Isolation Forest, Autoencoder | Production metrics | Anomaly alert |
+| **Conversational Assistant** | GPT-4 (via API) | Natural language query | Insightful response |
+
+---
+
+## 📂 Project Structure
+
