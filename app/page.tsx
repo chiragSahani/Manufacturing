@@ -61,7 +61,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src="https://res.cloudinary.com/dlyctssmy/image/upload/v1745220141/download_yn9g32.jpg"
                   alt="Manufacturing dashboard visualization"
                   className="rounded-lg object-cover border shadow-lg"
                   width={600}
